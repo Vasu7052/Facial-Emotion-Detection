@@ -22,11 +22,8 @@ emotion_dict = {
 img = image.load_img("jackman.png", grayscale=True, target_size=(48, 48))
 
 x = image.img_to_array(img)
-print(x.shape)
 x = np.expand_dims(x, axis=0)
-print(x.shape)
 x /= 255
-print(x.shape)
 
 custom = model.predict(x)
 index_max = np.argmax(custom[0])
